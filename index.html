@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Game</title>
+
+  <style>
+    body {
+      height: 100vh;
+    }
+
+    .loading-bar {
+      position: absolute;
+      top: 50%;
+      left: calc(50% - 100px);
+      width: 200px;
+      height: 1px;
+      overflow: hidden;
+    }
+
+    .loading-bar::before {
+      position: absolute;
+      content: '';
+      width: 2400px;
+      height: 1px;
+      animation: loading_bar 2s linear 0s infinite;
+      background: linear-gradient(to right, transparent 0, transparent 5.5555555556%, black 11.1111111111%, black 16.6666666667%, transparent 22.2222222222%, transparent 27.7777777778%, black 33.3333333333%, black 38.8888888889%, transparent 44.4444444444%, transparent 50%, transparent 55.5555555556%, black 61.1111111111%, black 66.6666666667%, transparent 72.2222222222%, transparent 77.7777777778%, black 83.3333333333%, black 88.8888888889%, transparent 94.4444444444%, transparent 100%);
+    }
+
+    @keyframes loading_bar {
+      0% {
+        transform: translateX(-1200px);
+      }
+
+      100% {
+        transform: none;
+      }
+    }
+  </style>
+
+</head>
+
+<body>
+  <span class="loading-bar"></span>
+</body>
+
+</html>
